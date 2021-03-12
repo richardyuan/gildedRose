@@ -2,11 +2,11 @@ package com.gildedrose.items;
 
 import com.gildedrose.Item;
 
-public class BackstagePasses implements GildedItem {
+public class BackstagePassesItem implements GildedItem {
 
     private Item item;
 
-    public BackstagePasses(Item item) {
+    public BackstagePassesItem(Item item) {
         this.item = item;
     }
 

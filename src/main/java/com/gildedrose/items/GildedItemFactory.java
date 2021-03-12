@@ -25,10 +25,14 @@ public class GildedItemFactory {
         }
 
         if (item.name.startsWith("Backstage passes")) {
-            return new BackstagePasses(item);
+            return new BackstagePassesItem(item);
         }
 
-        return new OrdinaryItem(item);
+        if (item.name.startsWith("Conjured")) {
+            return new OrdinaryItem(item, 2);
+        }
+        return new OrdinaryItem(item, 1);
+
     }
 
 }
