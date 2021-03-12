@@ -7,15 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 class GildedRose {
-    Item[] items;
     List<GildedItem> gildedItems;
 
     public GildedRose(Item[] items) {
-        this.items = items;
-        this.gildedItems = createGildedItems();
+        this.gildedItems = createGildedItems(items);
     }
 
-    private List<GildedItem> createGildedItems() {
+    private List<GildedItem> createGildedItems(Item[] items) {
         List<GildedItem> gildedLists = new ArrayList<>();
         for (Item item : items) {
             GildedItem gildedItem = GildedItemFactory.createGildedItem(item);

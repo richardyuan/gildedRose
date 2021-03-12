@@ -7,6 +7,10 @@ import com.gildedrose.Item;
  */
 public class GildedItemFactory {
 
+    private GildedItemFactory() {
+        throw new IllegalStateException("Factory class");
+    }
+
     public static GildedItem createGildedItem(Item item) {
         if (item.name == null || item.name.isBlank()) {
             throw new RuntimeException("Item with no name is not allowed!");
